@@ -1,0 +1,34 @@
+################################################################
+# API and dashboard configuration
+################################################################
+api:
+  # Dashboard
+  # true = default
+  # 
+  dashboard: true
+  #
+  # insecure: false is default
+  #
+  insecure: true
+
+################################################################
+# Docker configuration backend
+################################################################
+providers:
+  docker:
+    exposedByDefault: false
+
+################################################################
+# Traefik Logging -  DEBUG, PANIC, FATAL, ERROR, WARN, and INFO (DEFAULT is ERROR)
+################################################################
+log:
+  level: PANIC
+
+################################################################
+# Entrypoint
+################################################################
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
