@@ -14,7 +14,7 @@ services:
       # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock
       - ./local_cert/:/etc/certs/
-      - ./traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./traefik_virt.yml:/traefik.yml:ro
 
 # Add the catapp service
   catapp:
